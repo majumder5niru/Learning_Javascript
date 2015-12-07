@@ -1,0 +1,106 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Using several events</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap\bootstrap.min.js"></script>
+	<script>
+	//1.check display date
+		function displayDate() {
+    document.getElementById("time").innerHTML = Date();
+	}
+	//2.check cookies
+	function checkCookies() {
+    var text = "";
+    if (navigator.cookieEnabled == true) {
+        text = "Cookies are enabled.";
+    } else {
+        text = "Cookies are not enabled.";
+    }
+    document.getElementById("cookie").innerHTML = text;
+	}
+	//3.change to uppercase
+	function myFunction() {
+    var x = document.getElementById("name");
+    x.value = x.value.toUpperCase();
+	}
+	//4.onmouseover and onmouseout
+	function mOver(obj) {
+    obj.innerHTML = "Thank You"
+	}
+
+	function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"
+	}
+	//5.onmouseup,onmouseown and onmouseclick event
+	function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+	}
+	function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerHTML="Thank You";
+	}
+	//6.onfocus
+	function myFunction(x) {
+    x.style.background = "yellow";
+	}
+	//7.mouseEvents
+	//8.addEventListener() method
+	document.getElementById("myBtn").addEventListener("click", myFunction);
+	function myFunction() {
+    alert ("Hello World!");
+	}
+	//9.DOM root nodes
+	//10.Change the background color of all <p> elements in a node list:
+	
+	</script>
+  </head>
+  <body onload="checkCookies()">
+	<div class="container">
+		<div class="col-md-6">
+			<button id="time" onclick="displayDate()">Now,The time is...</button>
+			<p id="cookie"></p>
+		Enter your name: <input type="text" id="name" onchange="myFunction()"><br>
+		<p onmouseover="mOver(this)" onmouseout="mOut(this)"style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+		I want to use here an event</p><br>
+		<p onmousedown="mDown(this)" onmouseup="mUp(this)"style="background-color:#D94A38;width:90px;height:20px;padding:40px;">Click me</p><br>
+		<p>Enter your name: <input type="text" onfocus="myFunction(this)"></p><br>
+		<h1 onmouseover="style.color='red'"onmouseout="style.color='black'">Mouse over this text</h1><br>
+		<button id="myBtn">Try it</button>
+		</div>
+		<div class="col-md-6">
+			<body>
+
+				<p>Hello World!</p>
+
+				<div>
+					<p>The DOM is very useful!</p>
+					<p>This example demonstrates the <b>document.body</b> property.</p>
+				</div>
+					<script>
+						alert(document.body.innerHTML);
+					</script><br>
+					p>This is a p element</p>
+
+				<p>This is also a p element.</p>
+
+				<p>This is also a p element - Click the button to change the background color of all p elements in this document.</p>
+
+				<button onclick="myFunction()">Try it</button>
+				<script>
+				function myFunction() {
+					var myNodelist = document.getElementsByTagName("p");
+					var i;
+					for (i = 0; i < myNodelist.length; i++) {
+						myNodelist[i].style.backgroundColor = "red";
+					}
+				}
+				</script>
+
+
+			</body>
+		</div>
+	</div>
+  </body>
+</html>

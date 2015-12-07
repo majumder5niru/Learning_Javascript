@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script>
+		 var n=6;
+			function STAR(){
+				for(var r=1;r<=n;r++){
+					for(var c=1;c<=r;c++){
+						document.write("*");
+					}
+					document.write("<br>");
+				}
+				for(r=1;r<=n;r++){
+					for(j=n;j>r;j--){
+						document.write("*");
+					}
+					document.write("<br>");
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="star">
+		
+			<button type="button"onClick=STAR()>click</button>
+		</div>
+	</body>
+</html>

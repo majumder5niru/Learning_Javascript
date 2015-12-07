@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Spliting a number into digit</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+	<script>
+    show = [];
+	function split(){
+		number=(document.getElementById("input").value);
+		console.log("My number is",number);
+	if(isNaN(number)){
+    document.write ("please input a number a number ");
+     }else{
+		 number=Number(number);
+	 }
+	if(number>0){
+				while (number) {
+    show.push(number % 10);
+    number = Math.floor(number/10);	      
+	}
+document.getElementById("length").innerHTML=show.length;
+console.log(show.length);
+document.getElementById("result").innerHTML=show.reverse().join('<br/>');
+console.log(show.reverse().join(','));
+	}else{
+		document.getElementById("result").innerHTML="number can not be negetive";
+	}
+	}
+	</script>
+  </head>
+  <body>
+    <input type="text" id="input" placeholder="number"><br><br>
+	   <div id="length">Length of the given number is:</div><br>
+	   <div id="result">Result</div><br>
+            <button onClick="split()">click me</button>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title></title>
+	<script> 
+	var n=4;
+		function myStar(){
+			n=document.getElementById("star").value;
+			console.log("My number is",n);
+			if(isNaN(n)){
+			document.write ("please input a number a number ");
+			}
+			for(var i=0;i<=n;i++){
+				var str="*";
+				for(var j=0;j<i;j++){
+					str=str+"*";
+			}
+				}
+			for(i=0;i<=n;i++){
+				var str="*";
+				for(var j=n-1;j>=i;j--){
+					str=str+"*";
+				}
+				console.log(str);
+				}
+			}
+	</script>
+  </head>
+  <body>
+  
+   <input type="text" id="star" placeholder="number"><br>
+	<div id="result">
+		Result
+	</div><br>
+	<button type="button" onClick="myStar()" >Check</button>
+  </body>
+</html>

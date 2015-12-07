@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>First working with javascript</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap\bootstrap.min.js"></script>
+  </head>
+  <body>
+<img id="myImage" onclick="changeImage()" src="pic_bulboff.gif" width="100" height="180">
+	<p>Click the light bulb to turn on/off the light.</p>
+	<script>
+	   function changeImage(){
+	     var image=document.getElementById('myImage');
+		 if(img.src.match("bulbon")){
+		    img.src="pic_bulboff.gif";
+		 }
+		 else{
+		    img.src="pic_bulbon.gif";
+		 }
+	   }
+	</script>
+
+
+  </body>
+</html>

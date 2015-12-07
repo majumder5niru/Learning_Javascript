@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Creating several nodes</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap\bootstrap.min.js"></script>
+  </head>
+  <body>
+	<div id="div1">
+	
+		<p id="para1">Hello FTFL!!!</p>
+		
+		<p id="para2">Hello BARD!!!</p>
+		
+		<script>
+			var divTag = document.getElementById("div1");
+			var newpara = document.createElement("p");
+			var text = document.createTextNode("Hello Php Coders!!");
+			newpara.appendChild(text);
+			divTag.appendChild(newpara);
+			
+			var newpara2 = document.createElement("p");
+			var text2 = document.createTextNode("Hello  Comilla!!");
+			newpara2.appendChild(text2);
+			var para1= document.getElementById("para1");
+			divTag.insertBefore(newpara2,para1);
+
+			
+			var para2= document.getElementById("para2");
+			divTag.insertBefore(newpara,para2);	
+			
+			var newpara3 = document.createElement("p");
+			var text3 = document.createTextNode("Everyhting is added!!");
+			newpara3.appendChild(text3);
+			var divTag = document.getElementById("div1");
+			divTag.appendChild(newpara3);
+			divTag.removeChild(para1);
+			divTag.replaceChild(newpara2,para2);
+
+		</script>
+	</div>
+  </body>
+</html>

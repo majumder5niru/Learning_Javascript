@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<script src="bootstrap.min.js"></script>
+<script>
+
+function Calculator()
+{
+
+number1=document.getElementById("operand1").value;
+console.log("My number is",number1);
+number2=document.getElementById("operand2").value;
+console.log("My number is",number2);
+operator=document.getElementById("operator").value;
+console.log("My number is",operator);
+if( isNaN(number1)||isNaN(number2))
+{
+document.getElementById("result").innerHTML = "please put some operands here.";
+}
+else{
+number1=Number(number1);
+number2=Number(number2);
+}
+if(operator=="+")
+{
+document.getElementById("result").innerHTML=number1+number2;
+}
+else if(operator=="-")
+{
+document.getElementById("result").innerHTML=number1-number2;
+}
+else if(operator=="*")
+{
+document.getElementById("result").innerHTML=number1*number2;
+}
+else if(operator="/" && number2!=0){
+document.getElementById("result").innerHTML = number1/number2;
+}
+else if(number2==0){
+document.getElementById("result").innerHTML = "second number can't be zero";
+}
+else{
+document.getElementById("result").innerHTML = "Invalid";
+}
+}
+</script>
+</head>
+<body>
+
+<h2>Calculator</h2>
+<input type="text"id="operand1"placeholder="operand1"><br>
+<input type="text"id="operand2"placeholder="operand2"><br>
+<input type="text"id="operator"placeholder="operation"><br>
+<br>
+<div id="result">result</div>
+<br>
+<button onClick=Calculator()>click me</button>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script>
+		function is_prime(num){
+			for(var i=2;i<num;i++){
+				if(num%i==0){
+					return false;
+				}
+			}
+			return true;
+		}
+			function display(){
+				number=document.getElementById("prime").value;
+				console.log(number);
+				if(isNaN(number)){
+					document.write("please input a number ");
+				}else{
+					number=Number(number);
+				}
+				if(number>0){
+					var arr=[2];
+					for(var i=3;i<number;i+=2){
+						if(is_prime(i)){
+							arr.push(i);
+						}
+					}
+					console.log(arr);
+					document.getElementById("result").innerHTML=arr.join('<br/>');
+				}else{
+					document.write("Number can not be negeteive");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="prime">
+		<div id="result">Result</div>
+		<button type="button" onClick="display()">prime number</button>
+	</body>
+</html>

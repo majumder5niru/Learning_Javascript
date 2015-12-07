@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>pyramid</title>
+	</head>
+	<body>
+		<script text="text/javascript">
+		function pyramid(){
+			
+			var i;
+			var j;
+			var k;
+			var space=4;
+			var star=1;
+			for(i=1;i<=5;i++)
+			{
+				for(j=1;j<=space;j++)
+				{
+					document.write(" &nbsp; ");
+					//console.log(" &nbsp; ");
+				}
+				for(k=1;k<=star;k++)
+				{
+					document.write("*");
+					//console.log("*");
+				}
+				space=space-1;
+				star=star+2;
+				document.write("<br>");
+			}
+			}
+			
+		</script>
+	   <button onClick="pyramid()">show star</button>
+	</body>
+</html>

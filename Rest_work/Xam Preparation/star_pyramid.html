@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script>
+		var n=5;
+			for(var row=1;row<=n;row++){
+			str=" ";
+				for(var space=1;space<=(n-row);space++){
+				 str=str+" ";
+					document.write("&nbsp");
+					
+				}
+				
+				for(var star=1;star<=2*row-1;star++){
+				str=str+"*";
+					document.write("*");
+				}
+				console.log(str);
+				document.write("<br>");
+			}
+		</script>
+	</head>
+</html>

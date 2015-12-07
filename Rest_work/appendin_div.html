@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Appending div</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+   <script src="bootstrap.min.js"></script>
+   <script>
+    var counter = 1;
+    
+    function addInput(divName){
+	limit=(document.getElementById("input").value);
+		console.log("My number is",limit);
+	if(isNaN(limit)){
+            document.write ("please input a number ");
+        }else{
+		limit=Number(limit);
+		}
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+     }
+     else {
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "Item " + (counter + 1) + "<input type='text'>" 
+		  + "Quantity " + (counter + 1) + "<input type='text'>"
+		  + "amount " + (counter + 1) + "<input type='text'>";
+          document.getElementById(divName).appendChild(newdiv);
+		  console.log(newdiv.innerHTML);
+          counter++;
+     }
+}
+   </script>
+  </head> 
+</html>
+   <body>
+     <div id="dynamicInput">
+          Item 1 <input type="text" >
+		  Quantity 1<input type="text">
+		  amount 1  <input type="text">
+     </div><br>
+	 <input type="text" id="input" placeholder="number"><br>
+     <button type="button"  onClick="addInput('dynamicInput');">Add another text input</button>
+   </body>

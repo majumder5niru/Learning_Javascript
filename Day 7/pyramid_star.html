@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title></title>
+	<script> 
+		function myStar(){
+			var row;
+			var c;
+			var n=4;
+			var str="";
+			for(row=1;row<=n;row++){
+				for(c=1;c<n;c++){
+					console.log(" ");
+				}
+				for(c=1;c<=2*row-1;c++){
+					 str=str + "*";
+					console.log(str);
+				}
+				
+			}
+			
+		}
+	</script>
+  </head>
+  <body>
+	<div id="star">
+		Result
+	</div><br>
+	<button type="button" onClick="myStar()" >Check</button>
+  </body>
+</html>

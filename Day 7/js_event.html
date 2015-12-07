@@ -1,0 +1,15 @@
+<html>
+	<head>
+	<title>Using several events</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap\bootstrap.min.js"></script>
+	<script>
+		function ChangeDate(){
+			document.getElementById("time").InnerHTML=Date();
+		}
+	</script>
+	</head>
+	<body>
+		<button type="button" id="time" onClick="ChangeDate()">Change Date</button>
+	</body>
+</html>

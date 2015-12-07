@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+<script src="bootstrap.min.js"></script>
+ <script>
+	     var number1=2;
+		 var number2=4;
+		 var number3=12;
+		 var number4=4;
+		 var number5=12;
+		 var number6=14;
+		 var number7=23;
+		 var number8=14;
+		 var op1="+";
+		 var op2="-";
+		 var op3="*";
+		 var op4="/";
+
+		 function myFunction()
+		 {
+		    console.log("My number is",number1,number2);
+			number1=Number(document.getElementById("operand1").value);
+			console.log("My number is",number1);
+			number2=Number(document.getElementById("operand2").value);
+			console.log("My number is",number2);
+			op1=document.getElementById("operator").value;
+			console.log("My operator is",op1);
+			
+			console.log("My number is",number3,number4);
+			number3=Number(document.getElementById("operand1").value);
+			console.log("My number is",number3);
+			number4=Number(document.getElementById("operand2").value);
+			console.log("My number is",number4);
+			op2=document.getElementById("operator").value;
+			console.log("My operator is",op2);
+			
+			console.log("My number is",number5,number6);
+			number5=Number(document.getElementById("operand1").value);
+			console.log("My number is",number5);
+			number6=Number(document.getElementById("operand2").value);
+			console.log("My number is",number6);
+			op3=document.getElementById("operator").value;
+			console.log("My operator is",op3);
+			
+			console.log("My number is",number7,number8);
+			number7=Number(document.getElementById("operand1").value);
+			console.log("My number is",number7);
+			number8=Number(document.getElementById("operand2").value);
+			console.log("My number is",number8);
+			op4=document.getElementById("operator").value;
+			console.log("My operator is",op4);
+			
+			if(op1=="+"){
+			     addition=number1+number2;
+				document.getElementById("result").innerHTML=addition;
+			}
+			  else if(op2=="-"){
+			     subtraction=number3-number4;
+			   document.getElementById("result").innerHTML=subtraction;
+			  }
+			  else if(op3=="*"){
+			    multiplication=number5*number6;
+			    document.getElementById("result").innerHTML=multiplication;
+			  }
+			  else if(op4=="/" && number8!=0){
+			     Division=number7/number8;
+				 document.getElementById("result").innerHTML=Division;
+			  }
+			  else if(number8==0){
+			    document.getElementById("result").innerHTML="second operator can not be  zero.";
+			  }
+			else{
+			    
+				document.getElementById("result").innerHTML="Invalid";
+			}
+		 }
+</script>
+</head>
+<body>
+<h2>calculator</h2>
+<br>
+   <input type="text" id="operand1" placeholder="number1"><br>
+   <input type="text" id="operand2" placeholder="number2"><br>
+   <input type="text" id="operator" placeholder="operation">
+   
+   <br>
+   <div id="result">Result</div>
+   <br>
+<button onClick="myFunction()">click me</button>
+</body>
+</html>

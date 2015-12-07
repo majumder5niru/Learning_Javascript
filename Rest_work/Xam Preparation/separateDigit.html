@@ -1,0 +1,34 @@
+<html>
+	<head>
+	<script>
+	show=[];
+	function split(){
+		number=(document.getElementById("input").value);
+		console.log("My number is",number);
+		if(isNaN(number)){
+			document.write ("please input a number a number ");
+		}else{
+		 number=Number(number);
+		}
+		if(number>0){
+			while(number){
+				show.push(number%10);
+				number=Math.floor(number/10);
+			}
+			document.getElementById("length").innerHTML=show.length;
+			console.log(show.length);
+			document.getElementById("result").innerHTML=show.reverse().join("<br>");
+			console.log(show.reverse().join(','));
+		}else{
+		document.getElementById('result').innerHTML="number can not be negetive";
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<input type="text" id="input"><br><br>
+		<div id="length">Length of the number</div><br><br>
+		<div id="result">result</div>
+		<button type="button" onClick="split()">Click</button>
+	</body>
+</html>

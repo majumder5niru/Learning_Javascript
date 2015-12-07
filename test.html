@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<script src="bootstrap.min.js"></script>
+		<script>
+			
+			show = [];
+			function display(){
+				number = document.getElementById("number").value;
+				console.log(number);
+				if(isNaN(number)){
+					document.write("please enter a number");
+				}else{
+					number = Number(number);
+				}
+				if(number>0){
+					while(number){
+						show.push(number%10);
+						number = Math.floor(number/10);
+					}
+					document.getElementById("result").innerHTML = show.reverse().join("<br/>");
+				}else{
+					document.write("Number can not be negetive");
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="number"/>
+		<div id="result">Result</div>
+		<button type="button" onClick="display()">Submit</button>
+	</body>
+</html>

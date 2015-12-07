@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<script src="bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<script>
+		var images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"]; 
+		var index=0;
+		console.log(index);
+		function myImage(){
+			var next=document.getElementById("changeIt");
+			next.src=images[index];
+			index=index+1;
+			if(index>3){
+			index=0;
+			}
+			
+		}
+		function ChangeImage(){
+		var next=document.getElementById("changeIt");
+			next.src=images[index];
+			index=index-1;
+			if(index<0){
+				index=3;
+			}
+		}
+		//setInterval(myImage,1000);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="height:30px;"></div>
+		</div>
+			<div class="row">
+				<div class="col-md-3">
+					<img src="niru.jpg" id="changeIt" style="width:250px;"><br><br>
+					<button type="button" onClick="ChangeImage()" style="width:115px;">Previous</button>
+					<button type="button" onClick="myImage()" style="width:135px;" >Next</button><br><br>
+					<ul class="nav nav-pills nav-stacked">
+						<li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+						<li><a data-toggle="pill" href="#port">Portfolio</a></li>
+						<li><a data-toggle="pill" href="#form">Contact Me</a></li>
+						<li><a data-toggle="pill" href="#project">Project</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<div class="tab-content">
+					<div id="home" class="tab-pane fade in active">
+						<span style="line-height:0.9em; font-size:50px; color: #72ab00;">HELLO,</span>
+					<h5>
+						<span style="color: #72ab00;font-size:30px">I'm available for work.</span>
+					</h5>
+					<p style="font-family:Comic Sans;color:#FF3333">I am Nirupam majumder.I am a resident of Bangladesh.I am graduated from Noakhali Science and Technology University in Computer Science and 
+						Telecommunication Enginering.my academic background is very nice. I am an experienced web developer. I have several projcet which is given into github.
+						I am a php based web developer. I am hardworker,puntual and time conscious. I am concern about my responsibility about my work. I was involved with 
+						several cultural orgnaization in my campus.thanks to all.<br> keep me in your prayer.</p>
+						<h3 style="line-height: 0.9em;">
+							<span style="line-height: 0.9em;font-size:30px;color: #72ab00;">Website:</span>
+						</h3>
+						<p style="font-family:Cursive;font-size:15px;">www.mysite.com</p><br>
+						<h3 style="line-height: 0.9em;">
+							<span style="line-height: 0.9em;font-size:30px;color: #72ab00;">Cell:</span>
+						</h3>
+						<p style="font-family:Cursive;font-size:15px;">01825 001 221</p><br>
+						<h3 style="line-height: 0.9em;">
+							<span style="line-height: 0.9em;font-size:30px;color: #72ab00;">E-mail:</span>
+						</h3>
+						<p style="font-family:Cursive;font-size:15px;">niru.nstu@gmail.com</p><br>
+					</div>
+				<div id="port" class="tab-pane fade">
+						<img src="niru.jpg" width=200px;height=100px;alt="Image not Found" > &nbsp; &nbsp; 
+						<img src="nirupam.jpg" width=200px;height=100px;alt="Image not Found" > <br><br>
+						<img src="index1.jpg" width=200px;height=100px;alt="Image not Found" > &nbsp; &nbsp; 
+						<img src="index2.jpg" width=200px;height=100px;alt="Image not Found" >
+				</div>
+				<div id="form" class="tab-pane fade">
+				<center class="well">
+					<h2>Please fill up the below form</h2>
+					<form action="" id="FormStyle">
+						First name:<br>
+					<input type="text" name="firstname"><br>
+						Last name:<br>
+					<input type="text" name="lastname"><br>
+						Your E-mail address:<br>
+					<input type="text" name="email"><br>
+						Phone Number:<br>
+					<input type="number" name="phonenumber"><br>
+						Gender:<br>
+					<select name="">
+						<option>Male</option>
+						<option>Female</option>
+					</select><br>
+						Your Message:<br>
+					<button type="text" value="submit">Submit</button>
+					</form> 
+				</center>
+				</div>
+				<div id="project" class="tab-pane fade">
+					<h3 style="line-height: 0.9em;">
+						<span style="line-height: 0.9em;font-size:30px;color: #72ab00;">Available for:</span>
+					</h3>
+					<p style="font-family:Cursive;font-size:15px;">Project Management <br>Consulting <br> Marketing Strategy <br>Business Intelligence</p><br>
+					<h3 style="line-height: 0.9em;">
+						<span style="line-height: 0.9em;font-size:30px;color: #72ab00;">RECENT PROJECT</span>
+					</h3>
+					<p style="font-family:Cursive;font-size:15px;line-height: 3.0em;">1.A project on online sales monitoring.<br>
+						2.A project on web crawling.<br>
+						3.A project on NSTU info.<br>
+						4.A project on dining management.<br>
+						5.A project on hotel management.
+					</p>
+				</div>
+				</div>
+				</div>
+				<div class="col-md-3"></div>
+		</div>
+	</div>
+
+	</body>
+</html>

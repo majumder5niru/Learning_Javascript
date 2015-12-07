@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Using several events</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap\bootstrap.min.js"></script>
+	<script>
+	//1.check display date
+		function displayDate() {
+    document.getElementById("time").innerHTML = Date();
+	}
+	
+	//2.change to uppercase
+	function myFunction() {
+    var change = document.getElementById("name");
+    change.value = change.value.toUpperCase();
+	}
+	//3.onmouseover 
+	function mOver(obj) {
+    obj.innerHTML = "This events work"
+	}
+    //4.onmouseout
+	function mOut(obj) {
+    obj.innerHTML = "Nice Events"
+	}
+	//5.onmouseDown event
+	function mDown(obj) {
+    obj.style.backgroundColor = "blue";
+    obj.innerHTML = "working";
+	}
+	</script>
+  </head>
+  <body >
+	<div class="container">
+		<div class="col-md-6">
+			<button id="time" onclick="displayDate()">Time</button><br>
+			
+		Enter your name: <input type="text" id="name" onChange="myFunction()"><br>
+		
+		
+		<p onmouseover="mOver(over)" onmouseout="mOut(this)"style="background-color:#black;width:120px;height:20px;padding:40px;">
+		I want to use here an event</p><br>
+		<p onmousedown="mDown(this)" onmouseup="mUp(this)"style="background-color:#red;width:90px;height:20px;padding:40px;">Click me</p><br>
+		
+		
+		<h1 onmouseover="style.color='red'">Nirupam</h1><br>
+		
+		</div>
+		<div class="col-md-6">
+			
+		</div>
+	</div>
+  </body>
+</html>

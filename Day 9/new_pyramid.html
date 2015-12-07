@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title></title>
+	<script> 
+		var num=15;
+		function pyramid(num){
+		
+		for(var i=1;i<=num;i++){
+			str="";
+			for(var j=1;j<=(num-i);j++){
+				str = str + " ";
+			}
+			for(var k=1;k<=2*i-1;k++){
+				str = str + "*";
+			}
+			console.log(str);
+		}
+	}
+	</script>
+  </head>
+  <body>
+	<div id="star">
+		Result
+	</div><br>
+	<button type="button" onClick="pyramid(num)" >Check</button>
+  </body>
+</html>

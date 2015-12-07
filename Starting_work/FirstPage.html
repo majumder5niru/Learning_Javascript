@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>First page with grid,button & badge</title>
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<script>
+	  function ChangeImage(){
+		var profile_image=document.getElementById("changeIt");
+		profile_image.src="nirupam.jpg";
+	  }
+	  function mouseOverme(){
+		var paragraph=document.getElementById("sample");
+		divTag.style.backgroundColor="yellow";
+	  }
+	   function mouseOutme(){
+		var paragraph=document.getElementById("sample");
+		paragraph.style.backgroundColor="white";
+	  }
+	</script>
+</head>
+<body>
+   <div class="container">
+       <div class="row" >
+	      <div class="col-md-4 col-sm-3">
+		     <img src="niru.jpg" id="changeIt" width=200px;height=200px; alt="Image not Found" class="img-rounded" ><br/><br/>
+			 
+			 <button class="btn btn-default" onClick="ChangeImage()" style="width:200px;">Change picture</button><br/><br/>
+			 <button class="btn btn-default"  style="width:200px;">Profile</button><br/><br/>
+			 <button class="btn btn-primary"style="width:200px;">Portfolio</button><br/><br/>
+			 <button class="btn btn-success"style="width:200px;">Contact me</button><br/><br/>
+			 <button class="btn btn-info"style="width:200px;">See result</button><br/><br/>
+			 <button class="btn btn-warning"style="width:200px;">Project</button><br/><br/>
+			 <button class="btn btn-danger"style="width:200px;">Testimonial</button><br/><br/>
+			 <button class="btn btn-link"style="width:200px;">Qoutes</button>
+		  </div>
+		  <div class="col-md-8 col-sm-9 " " >
+		     <h1>Nirupam Majumder</h1> <hr>
+			 <h2>About me</h2> <hr>
+			 <p  onmouseover="mouseOverme()" onmouseout="mouseOutme()"  id="sample">I am Nirupam Majumder. I am learning html and CSS.I have completed my graduation form <i>Noakhali Science and Technology University</i> in <i>Computer Scince
+                and Telecommunication Engineering.</i><br>
+                E-mail:<b>niru.nstu@gmail.com</b> <br>
+                Keep me in your prayer </p>
+			<span class="badge" style="float:right">Thank You</span>
+		  </div>
+	   </div>
+   </div>
+</body>
+</html>

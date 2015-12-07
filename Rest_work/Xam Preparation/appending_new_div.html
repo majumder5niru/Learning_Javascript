@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+		<script src="bootstrap.min.js"></script>
+		<script>
+		var counter=1;
+			function addInput(divName){
+				
+				limit=document.getElementById("input").value;
+				console.log(limit);
+				if(isNaN(limit)){
+					document.write("please input a number");
+				}else{
+					limit=Number(limit);
+				}
+				if(counter==limit){
+					alert("You have reached the number of "+counter+"limit");
+				}else{
+					var newDiv=document.createElement('div');
+					newDiv.innerHTML="item"+(counter+1)+"<input type='text'>"
+					+"Quantity"+(counter+1)+"<input type='text'>"
+					+"amount"+(counter+1)+"<input type='text'>";
+					document.getElementById(divName).appendChild(newDsiv);
+					console.log(newDiv.innerHTML);
+					counter++;
+				}
+				
+			}
+		</script>
+	</head>
+   <body>
+	<div>
+	Item1 <input type="text">
+	Quantity1 <input type="text">
+	amount1 <input type="text">
+		<input type="text" id="input" placeholder="number"/>
+		<button type="button" onClick="addInput('dynamicInput');">click me</button>
+	</div>
+   </body>
+</html>

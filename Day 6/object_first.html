@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title></title>
+	<script> 
+		var first=true;
+		var array=[1,"name",90];
+		function myObject(company){
+				var car={color:"Black",company:"Toyota",companyName:"",refurnished:true};
+				
+				switch(company)
+				{
+					case "toyota":
+						car.company="toyota";
+						car.refurnished=true;
+						break;
+					case "mahindra":
+						car.company="mahindra";
+						car.refurnished=false;
+						break;
+					default:
+						return "Not a company";
+						break;
+				}
+				return car;
+			}
+		function myFunction(){
+			var toyotacar=myObject("mahindra");
+			console.log(toyotacar);
+		}
+	</script>
+  </head>
+  <body>
+	<div id="items">
+		
+	</div><br>
+	<button type="button" onClick="myFunction()" >Check</button>
+  </body>
+</html>

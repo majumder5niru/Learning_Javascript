@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>First working with javascript</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap.min.js"type="text/javascript"></script>
+  </head>
+  <body>
+    <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">click to find date</button>
+	<p id="demo"></p>
+	<button type="button" onclick="document.getElementById('demo').innerHTML='Hello javascript!'">javascript can change html content</button>
+	<p id="demo"></p>
+	
+	
+	
+	<img id="myImage" onclick="changeImage()" src="pic_bulboff.gif" width="100" height="180">
+	<p>Click the light bulb to turn on/off the light.</p>
+	<script>
+	   function changeImage(){
+	     var image=document.getElementById('myImage');
+		 if(img.src.match("bulbon")){
+		    img.src="pic_bulboff.gif";
+		 }
+		 else{
+		    img.src="pic_bulbon.gif";
+		 }
+	   }
+	</script>
+	
+	
+	<p id="demo">javascript can change css style</p>
+	<script>
+	   function myFunction(){
+	     var x=document.getElementById("demo");
+		 x.style.fontSize="25px";
+		 x.style.color="red";
+	   }
+	</script>
+	<button type="button" onclick="myFunction()">click here</button>
+
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>DOM</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+	<script type="text/javascript" src=""></script>
+  </head>
+  <body>
+	<div id="div1">
+		
+		<p id="para1">Hello FTFL!!!</p>
+		<p id="para2">Hello BARD!!!</p>
+		<script>
+			var divTag = document.getElementById("div1");
+			var newpara = document.createElement("p");
+			var text = document.createTextNode("Hello Php Coders!!");
+			newpara.appendChild(text);
+			
+			var child1=divTag.childNodes[0];
+			var child2= child1.nextsibling;
+			console.log(child1);
+			divTag.replaceChild(newpara,child1);
+
+		</script>
+	</div>
+  </body>
+</html>

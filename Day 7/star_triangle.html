@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title></title>
+	<script> 
+	var n=4;
+		function myStar(){
+			
+			for(var r=1;r<=5;r++){
+				for(var c=1;c<=r;c++){
+					document.write("*");
+			}
+					document.write("<br>");
+				}
+			for(var r=1;r<=5;r++){
+				for(var c=1;c<=5;c++){
+					if(c>r){
+						document.write("*");
+					}
+			}
+					document.write("<br>");
+				}
+				document.write("<br>");
+			}
+	</script>
+  </head>
+  <body>
+  
+   
+	<div id="star">
+		Result
+	</div><br>
+	<button type="button" onClick="myStar()" >Check</button>
+  </body>
+</html>
